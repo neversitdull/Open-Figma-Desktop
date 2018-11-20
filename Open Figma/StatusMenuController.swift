@@ -20,7 +20,7 @@ class StatusMenuController: NSObject {
     let hotKey = HotKey(key: .f, modifiers: [.control, .option, .command])
     let pasteboard = NSPasteboard.general
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-    let urlPrefix = "https://www.figma.com/"
+    let figmaURLType = "figma.com/file"
     
     
     /*
@@ -46,12 +46,12 @@ class StatusMenuController: NSObject {
     @IBOutlet weak var figmaMenu: NSMenu!
     
     
+    
     /*
      -------------------
      Actions
      -------------------
      */
-    
     
     //Action that runs openFigma
     @IBAction func openFigma(_ sender: Any) {
@@ -62,6 +62,7 @@ class StatusMenuController: NSObject {
     @IBAction func quitApp(_ sender: Any) {
         NSApplication.shared.terminate(self)
     }
+    
     
     
     /*
@@ -93,8 +94,6 @@ class StatusMenuController: NSObject {
      -------------------
      */
     
-    
-    
     //Opens a Figma URL in the Desktop APP
     func openFigma() {
         bundleIdentifier = "com.Figma.Desktop"
@@ -106,8 +105,7 @@ class StatusMenuController: NSObject {
             let filePrefix = "figma://"
             
             // Checks to see if what was copied contains a Figma or Staging URL
-            if originalURL.hasPrefix(urlPrefix) == true {
-                
+            if originalURL.localizedStandardContains(figmaURLType) {
                 // Looks in originalURL up to the index of the word file
                 if let index = (originalURL.range(of: "file/")?.lowerBound) {
                     
