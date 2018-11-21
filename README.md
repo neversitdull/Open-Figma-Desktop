@@ -6,6 +6,9 @@ _*Note: This is a personal project and not affiliated with Figma_
 <br>
 
 ## Installation
+
+Requires OSX 10.14 or later
+
 Download the latest release [here](https://github.com/neversitdull/Open-Figma-Desktop/releases). 
 
 Double-click on the .dmg file and drag Open Figma into your Applications folder
