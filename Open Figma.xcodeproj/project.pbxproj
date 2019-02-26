@@ -44,13 +44,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CC709A7C219E3B560051DCAB /* Open Notion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Notion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC709A7C219E3B560051DCAB /* Open Figma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Figma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC709A7F219E3B560051DCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC709A81219E3B560051DCAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC709A83219E3B580051DCAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC709A86219E3B580051DCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC709A88219E3B580051DCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC709A89219E3B580051DCAB /* Open_Notion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Open_Notion.entitlements; sourceTree = "<group>"; };
+		CC709A89219E3B580051DCAB /* Open_Figma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Open_Figma.entitlements; sourceTree = "<group>"; };
 		CCDF76E421A3D79D0084C06D /* HotKey.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = HotKey.framework.dSYM; path = Carthage/Build/Mac/HotKey.framework.dSYM; sourceTree = "<group>"; };
 		CCDF76E521A3D79D0084C06D /* HotKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HotKey.framework; path = Carthage/Build/Mac/HotKey.framework; sourceTree = "<group>"; };
 		CCDF76EE21A3EAE50084C06D /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		CC709A73219E3B560051DCAB = {
 			isa = PBXGroup;
 			children = (
-				CC709A7E219E3B560051DCAB /* Open Notion */,
+				CC709A7E219E3B560051DCAB /* Open Figma */,
 				CC709A7D219E3B560051DCAB /* Products */,
 				CCDF76E521A3D79D0084C06D /* HotKey.framework */,
 				CCDF76E421A3D79D0084C06D /* HotKey.framework.dSYM */,
@@ -82,12 +82,12 @@
 		CC709A7D219E3B560051DCAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC709A7C219E3B560051DCAB /* Open Notion.app */,
+				CC709A7C219E3B560051DCAB /* Open Figma.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC709A7E219E3B560051DCAB /* Open Notion */ = {
+		CC709A7E219E3B560051DCAB /* Open Figma */ = {
 			isa = PBXGroup;
 			children = (
 				CC709A7F219E3B560051DCAB /* AppDelegate.swift */,
@@ -96,17 +96,17 @@
 				CC709A83219E3B580051DCAB /* Assets.xcassets */,
 				CC709A85219E3B580051DCAB /* Main.storyboard */,
 				CC709A88219E3B580051DCAB /* Info.plist */,
-				CC709A89219E3B580051DCAB /* Open_Notion.entitlements */,
+				CC709A89219E3B580051DCAB /* Open_Figma.entitlements */,
 			);
-			path = "Open Notion";
+			path = "Open Figma";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC709A7B219E3B560051DCAB /* Open Notion */ = {
+		CC709A7B219E3B560051DCAB /* Open Figma */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC709A8C219E3B580051DCAB /* Build configuration list for PBXNativeTarget "Open Notion" */;
+			buildConfigurationList = CC709A8C219E3B580051DCAB /* Build configuration list for PBXNativeTarget "Open Figma" */;
 			buildPhases = (
 				CC709A78219E3B560051DCAB /* Sources */,
 				CC709A79219E3B560051DCAB /* Frameworks */,
@@ -119,9 +119,9 @@
 			);
 			dependencies = (
 			);
-			name = "Open Notion";
+			name = "Open Figma";
 			productName = "Open Figma";
-			productReference = CC709A7C219E3B560051DCAB /* Open Notion.app */;
+			productReference = CC709A7C219E3B560051DCAB /* Open Figma.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CC709A77219E3B560051DCAB /* Build configuration list for PBXProject "Open Notion" */;
+			buildConfigurationList = CC709A77219E3B560051DCAB /* Build configuration list for PBXProject "Open Figma" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC709A7B219E3B560051DCAB /* Open Notion */,
+				CC709A7B219E3B560051DCAB /* Open Figma */,
 			);
 		};
 /* End PBXProject section */
@@ -339,8 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Open Notion/Open_Notion.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "Open Figma/Open_Figma.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7ZJ5MR5T68;
@@ -349,14 +348,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Open Notion/Info.plist";
+				INFOPLIST_FILE = "Open Figma/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.neversitdull.Open-Notion";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neversitdull.Open-Figma";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -365,8 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Open Notion/Open_Notion.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "Open Figma/Open_Figma.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7ZJ5MR5T68;
@@ -375,14 +372,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Open Notion/Info.plist";
+				INFOPLIST_FILE = "Open Figma/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.neversitdull.Open-Notion";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.neversitdull.Open-Figma";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -390,7 +386,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC709A77219E3B560051DCAB /* Build configuration list for PBXProject "Open Notion" */ = {
+		CC709A77219E3B560051DCAB /* Build configuration list for PBXProject "Open Figma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC709A8A219E3B580051DCAB /* Debug */,
@@ -399,7 +395,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC709A8C219E3B580051DCAB /* Build configuration list for PBXNativeTarget "Open Notion" */ = {
+		CC709A8C219E3B580051DCAB /* Build configuration list for PBXNativeTarget "Open Figma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC709A8D219E3B580051DCAB /* Debug */,

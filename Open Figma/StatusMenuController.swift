@@ -17,11 +17,10 @@ class StatusMenuController: NSObject {
      -------------------
     */
     
-    let hotKey = HotKey(key: .n, modifiers: [.control, .option, .command])
+    let hotKey = HotKey(key: .f, modifiers: [.control, .option, .command])
     let pasteboard = NSPasteboard.general
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-    let notionURLType = "notion.so"
-    
+    let figmaURLType = "figma.com/file"
     
     /*
      -------------------
@@ -43,7 +42,7 @@ class StatusMenuController: NSObject {
      */
     
     //Outlet to Menu in Storyboard
-    @IBOutlet weak var notionMenu: NSMenu!
+    @IBOutlet weak var figmaMenu: NSMenu!
     
     
     
@@ -54,8 +53,8 @@ class StatusMenuController: NSObject {
      */
     
     //Action that runs openFigma
-    @IBAction func openNotion(_ sender: Any) {
-        openNotion()
+    @IBAction func openFigma(_ sender: Any) {
+        openFigma()
     }
     
     //Action that quits the app
@@ -74,7 +73,7 @@ class StatusMenuController: NSObject {
     //Sets up the menu
     override func awakeFromNib() {
         
-        statusItem.menu = notionMenu
+        statusItem.menu = figmaMenu
         let icon = NSImage(named: "figma-icon")
     
         if let button = statusItem.button {
@@ -83,7 +82,7 @@ class StatusMenuController: NSObject {
         
         //Looks for key command to be pressed then calls openFigma
         hotKey.keyDownHandler = {
-            self.openNotion()
+            self.openFigma()
         }
     }
     
@@ -95,23 +94,18 @@ class StatusMenuController: NSObject {
      */
     
     //Opens a Figma URL in the Desktop APP
-<<<<<<< HEAD:Open Notion/StatusMenuController.swift
-    func openNotion() {
-=======
     func openFigma() {
-        bundleIdentifier = "com.Figma.Desktop"
->>>>>>> parent of 0025d08... Removed un-needed function:Open Figma/StatusMenuController.swift
         //Checks to see if clipboard contains any data
         if pasteboard.pasteboardItems != nil {
             
             // Takes clipboard data and adds it to a String
             originalURL = pasteboard.string(forType: .string)!
-            let filePrefix = "notion://"
+            let filePrefix = "figma://"
             
             // Checks to see if what was copied contains a Figma or Staging URL
-            if originalURL.localizedStandardContains(notionURLType) {
+            if originalURL.localizedStandardContains(figmaURLType) {
                 // Looks in originalURL up to the index of the word file
-                if let index = (originalURL.range(of: "www.notion.so")?.lowerBound) {
+                if let index = (originalURL.range(of: "file/")?.lowerBound) {
                     
                     //Takes everthing starting with the word file and adds it to a new String
                     let shortenedURL = String(originalURL.suffix(from: index))
@@ -121,18 +115,19 @@ class StatusMenuController: NSObject {
                         
                         //Adds filePrefix to the shortenedURL to open inside Figma
                         fileURL = "\(filePrefix)\(encodedURL)"
+                     
                         
                         //Adds string to URL
                         if let finalURL = URL(string: fileURL) {
                             
                             //Show Notification - Opening Figma URL
-                            notificationTitle = "Opening in Notion"
+                            notificationTitle = "Opening in Figma Desktop"
                             notificationSubTitle = fileURL
                             
                             showNotification()
                             //Open Figma Desktop
                             NSWorkspace.shared.open(finalURL)
-                        
+                           
                         }
                     }
                 }
@@ -140,8 +135,8 @@ class StatusMenuController: NSObject {
             } else {
                 
                 //Show notification - No Figma URL Detected
-                notificationTitle = "No Notion URL Detected"
-                notificationSubTitle = "Copy a Notion URL to your clipboard and try again"
+                notificationTitle = "No Figma URL Detected"
+                notificationSubTitle = "Copy a Figma URL to your clipboard and try again"
                 
                 showNotification()
                 
@@ -149,16 +144,10 @@ class StatusMenuController: NSObject {
         }
     }
     
-    //Opens Figma App
-    func open(url: URL, appId: String? = nil) -> Bool {
-        return NSWorkspace.shared.open(
-            [url],
-            withAppBundleIdentifier: bundleIdentifier,
-            options: NSWorkspace.LaunchOptions.default,
-            additionalEventParamDescriptor: nil,
-            launchIdentifiers: nil
-        )
+    func openApp(_ named: String, autoLaunch: Bool) -> Bool {
+        return NSWorkspace.shared.launchApplication(named)
     }
+    
     
     //Shows Notification
     func showNotification() -> Void {
@@ -168,5 +157,4 @@ class StatusMenuController: NSObject {
         NSUserNotificationCenter.default.deliver(notification)
     }
 }
-
 
