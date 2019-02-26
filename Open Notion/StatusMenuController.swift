@@ -95,7 +95,12 @@ class StatusMenuController: NSObject {
      */
     
     //Opens a Figma URL in the Desktop APP
+<<<<<<< HEAD:Open Notion/StatusMenuController.swift
     func openNotion() {
+=======
+    func openFigma() {
+        bundleIdentifier = "com.Figma.Desktop"
+>>>>>>> parent of 0025d08... Removed un-needed function:Open Figma/StatusMenuController.swift
         //Checks to see if clipboard contains any data
         if pasteboard.pasteboardItems != nil {
             
@@ -116,7 +121,6 @@ class StatusMenuController: NSObject {
                         
                         //Adds filePrefix to the shortenedURL to open inside Figma
                         fileURL = "\(filePrefix)\(encodedURL)"
-                     
                         
                         //Adds string to URL
                         if let finalURL = URL(string: fileURL) {
@@ -128,7 +132,7 @@ class StatusMenuController: NSObject {
                             showNotification()
                             //Open Figma Desktop
                             NSWorkspace.shared.open(finalURL)
-                           
+                        
                         }
                     }
                 }
@@ -145,10 +149,16 @@ class StatusMenuController: NSObject {
         }
     }
     
-    func openApp(_ named: String, autoLaunch: Bool) -> Bool {
-        return NSWorkspace.shared.launchApplication(named)
+    //Opens Figma App
+    func open(url: URL, appId: String? = nil) -> Bool {
+        return NSWorkspace.shared.open(
+            [url],
+            withAppBundleIdentifier: bundleIdentifier,
+            options: NSWorkspace.LaunchOptions.default,
+            additionalEventParamDescriptor: nil,
+            launchIdentifiers: nil
+        )
     }
-    
     
     //Shows Notification
     func showNotification() -> Void {
@@ -158,4 +168,5 @@ class StatusMenuController: NSObject {
         NSUserNotificationCenter.default.deliver(notification)
     }
 }
+
 
