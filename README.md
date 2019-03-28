@@ -1,3 +1,6 @@
+This now exists as native functionality within Figma: https://www.figma.com/blog/figma-desktop-app-improvements/
+
+
 # Open-Figma-Desktop
 A Mac Menubar App that helps open Figma URLs in the Figma Desktop App
 <br>
